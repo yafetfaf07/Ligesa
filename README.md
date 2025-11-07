@@ -1,30 +1,133 @@
-Ligesa: Digital Charity & QR Donation Platform (Powered by Arifpay)🌟 Project OverviewLigesa is a pioneering digital payment application designed to revolutionize the charity and philanthropy sector in Ethiopia. It provides a seamless, secure, and transparent way for individuals and organizations (such as churches, mosques, and NGOs) to handle cashless donations using QR code technology integrated with the Arifpay financial ecosystem.The goal is to move charitable giving from cash-based, non-transparent systems to an efficient, digital platform, supporting Ethiopia's national push for financial inclusion and digitalization.✨ Unique Value & ImpactLigesa's uniqueness and impact are centered on solving key operational and trust issues in the charity sector:True Cashless Interoperability: Utilizes Arif-QR to accept donations from any major bank app or mobile wallet within the Ethiopian financial network, enabling instantaneous, spontaneous, and cashless giving in any physical location.Enhanced Transparency: Provides beneficiaries with a real-time, digital ledger of all funds received, dramatically improving accountability and fostering greater donor trust.Diaspora Connection: Offers a reliable and secure digital channel for the Ethiopian diaspora to contribute directly to local, trusted community organizations without excessive remittance fees.Digital Economy Driver: Actively supports the "Digital Ethiopia 2030" strategy by driving digital adoption in a traditionally cash-reliant sector.🚀 FeaturesQR Code Generation: Generates unique, interoperable QR codes for each designated donation recipient (e.g., a specific church fund or NGO campaign).Real-Time Transaction Tracking: Donors and recipients can view confirmed donations instantly.Secure Payment Gateway: Utilizes the robust and licensed Arifpay API for secure transaction processing.User Authentication: Secure access control for both administrators and charity beneficiaries.Responsive Mobile App: Built with Flutter for a fast and consistent user experience on both iOS and Android.🛠️ Tech StackBackendTechnologyRoleNode.jsRuntime EnvironmentExpress.jsWeb FrameworkMongoDBNoSQL DatabaseJWTAuthentication & AuthorizationFrontendTechnologyRoleFlutterCross-platform Mobile UI FrameworkDartProgramming Language⚙️ Installation and SetupPrerequisitesYou must have the following installed on your local machine:Node.js (LTS Version) and npm or YarnMongoDB running locally or a cloud connection stringFlutter SDK and necessary IDE/Platform tools (Android Studio/VS Code)1. Backend SetupClone the repository:git clone [Your-Repo-URL]
+<div align="center">
+
+# 🌍 Ligesa  
+### Helping communities give smarter — transparent, secure, and digital.
+
+A modern QR-based digital charity platform enabling secure, cashless, and trustworthy donations using **ArifPay**.  
+Built to support Ethiopia’s transition toward a **digitally empowered, transparent giving culture**.
+
+</div>
+
+---
+
+## ✨ Overview
+
+**Ligesa** simplifies how donations are collected and managed by enabling churches, mosques, NGOs, and community groups to receive contributions via **QR code payments**.
+
+This reduces:
+- Cash handling risks ✅
+- Manual counting & recording ✅
+- Lack of transparency ✅
+
+And ensures:
+- Trust  
+- Efficiency  
+- Real-time accountability  
+
+---
+
+## 🚀 Features
+
+| Feature Category | Description |
+|---|---|
+| **QR Donation** | Generate & scan donation QR codes instantly. |
+| **Real-Time Ledger** | Every donation is logged transparently & securely. |
+| **Diaspora Support** | Donors abroad can give without friction. |
+| **Role-Based Access** | Separate donor/admin/organization panels. |
+| **Cross-Platform Mobile UI** | Works seamlessly on Android & iOS via Flutter. |
+
+---
+
+## 📱 App Screenshots (Actual UI)
+
+<div align="center">
+
+| | | |
+|---|---|---|
+| **Onboarding** | **Welcome UI** | **Secure Login** |
+| <img src="./screenshots/onboarding1.png" width="250"/> | <img src="./screenshots/onboarding2.png" width="250"/> | <img src="./screenshots/onboarding3.png" width="250"/> |
+
+</div>
+
+> *(More screens can be added for Home → QR Scan → Donation Flow once available.)*
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Mobile App | **Flutter + Dart** |
+| Backend API | **Node.js + Express** |
+| Database | **PostgreSQL** |
+| Payments | **ArifPay API** |
+| Auth | **JWT Access & Refresh Tokens** |
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Backend Setup
+
+```bash
+git clone <your-backend-repo>
 cd ligesa-backend
-Install dependencies:npm install
-# or
-yarn install
-Configure Environment Variables (See the Configuration section below).Start the server:npm run dev
-# or
-yarn dev
-The backend should now be running at http://localhost:5000.2. Frontend Setup (Flutter)Navigate to the frontend directory:cd ../ligesa-frontend
-Install dependencies:flutter pub get
-Configure Environment Variables (See the Configuration section below). These variables are typically placed in a separate file (e.g., .env or config.dart) depending on your implementation.Run the application:flutter run
-🔐 Configuration (Environment Variables)You need to create the respective environment files in your backend (.env in the root) and frontend projects.1. Backend .envCreate a file named .env in your backend root directory:PORT_NUMBER=5000
-# Secret key for generating JSON Web Tokens for access control. **CHANGE THIS.**
-JWT_TOKEN=YOUR_STRONG_ACCESS_TOKEN_SECRET
-JWT_EXPIRATION=1h
-# Secret key for generating refresh tokens. **CHANGE THIS.**
-JWT_REFRESH_SECRET=YOUR_STRONG_REFRESH_TOKEN_SECRET
+npm install
+npm run dev
+```
 
-# Connection string for your local MongoDB instance.
-MONGO_DB_LOCAL="mongodb://localhost:27017/arifpay"
+Server runs at:
+```
+http://localhost:5000
+```
 
-NODE_ENV="development"
-2. Flutter App ConfigurationDepending on your Flutter setup (e.g., using flutter_dotenv package), create a configuration file. Note: For security, never commit actual tokens to GitHub. The values below must be masked secrets used by your app.# Example Flutter .env file (or equivalent config.dart)
+### 2️⃣ Flutter App Setup
 
-# Token for the third-party messaging or authentication service (e.g., Africom Message Service  https://www.afromessage.com/).
-AFRMESSAGE_TOKEN=YOUR_AFRMESSAGE_TOKEN_HERE
+```bash
+cd ../ligesa-frontend
+flutter pub get
+flutter run
+```
 
-# The official API token required for connecting and processing transactions via the Arifpay payment gateway.
-ARIF_PAY_TOKEN=YOUR_ARIF_PAY_LIVE_TOKEN
-For any contribution, feature request, or issue, please use the GitHub Issues tracker.
+---
+
+## 🔐 Environment Variables
+
+### Backend `.env` Example
+```
+PORT=5000
+JWT_ACCESS_SECRET=YOUR_SECRET_KEY
+JWT_REFRESH_SECRET=YOUR_REFRESH_KEY
+DATABASE_URL="postgresql://user:password@localhost:5432/ligesa"
+```
+
+### Flutter App Config Example
+```
+ARIFPAY_TOKEN=YOUR_ARIFPAY_LIVE_KEY
+```
+
+> **Never commit real tokens.**
+
+---
+
+## 🌍 Vision & Impact
+
+Ligesa promotes:
+- Transparency in charitable donations  
+- Financial inclusion  
+- Trust between donors & institutions  
+- Growth of Ethiopia’s digital economy  
+
+---
+
+## 🤝 Contributing
+
+Pull requests, feature suggestions, and collaboration discussions are welcome.
+
+---
+
+<div align="center">
+
+**Built with ❤️ to make generosity simple, secure, and transparent.**
+
+</div>
