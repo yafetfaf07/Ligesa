@@ -45,7 +45,7 @@ And ensures:
 | | | |
 |---|---|---|
 | **Onboarding** | **Welcome UI** | **Secure Login** |
-| <img src="./screenshots/onboarding1.png" width="250"/> | <img src="./screenshots/onboarding2.png" width="250"/> | <img src="./screenshots/onboarding3.png" width="250"/> |
+| <img src="./screenshots/onboarding1.png" width="250"/> | <img src="./screenshots/onboarding2.png" width="250"/> | <img src="./screenshots/p1.jpg" width="250"/> |
 
 </div>
 
