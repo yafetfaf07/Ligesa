@@ -59,7 +59,7 @@ And ensures:
 |---|---|
 | Mobile App | **Flutter + Dart** |
 | Backend API | **Node.js + Express** |
-| Database | **PostgreSQL** |
+| Database | **MongoDB** |
 | Payments | **ArifPay API** |
 | Auth | **JWT Access & Refresh Tokens** |
 
@@ -98,7 +98,7 @@ flutter run
 PORT=5000
 JWT_ACCESS_SECRET=YOUR_SECRET_KEY
 JWT_REFRESH_SECRET=YOUR_REFRESH_KEY
-DATABASE_URL="postgresql://user:password@localhost:5432/ligesa"
+ARIF_MESSAGE=YOUR_KEY_HERE"
 ```
 
 ### Flutter App Config Example
@@ -106,7 +106,7 @@ DATABASE_URL="postgresql://user:password@localhost:5432/ligesa"
 ARIFPAY_TOKEN=YOUR_ARIFPAY_LIVE_KEY
 ```
 
-> **Never commit real tokens.**
+
 
 ---
 
